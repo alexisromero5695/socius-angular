@@ -1,0 +1,4 @@
+.nav-item > a.active{
+    font-weight: bolder;
+    color: #0d6efd !important;
+}

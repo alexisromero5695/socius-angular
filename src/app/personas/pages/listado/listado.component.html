@@ -1,0 +1,48 @@
+<style>
+    .tbl-container {
+        /* width: 400px; */
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .bg-red {
+        background-color: red;
+        color: white;
+    }
+
+    .bdr {
+        border-radius: 6px;
+        overflow: hidden;
+    }
+</style>
+<app-menu-fixed></app-menu-fixed>
+<section class="bg-primary py-3 py-md-5 py-xl-8 vh-100">
+    <div class="container text-center mt-4">
+        <h2 class="text-light h1 fw-bolder">Listado de Personas</h2>
+        <div class="tbl-container bdr">
+            <table class="table  table-striped table-bordered table-sm row-border hover mb-0" id="datatableexample">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let persona of personas">
+                        <td>{{ persona.IdPersona }}</td>
+                        <td>{{ persona.Nombre }}</td>
+                        <td>{{ persona.Apellido }}</td>
+                        <td>
+                            <a href="{{ persona.Linkedin }}" target="_blank"> {{ persona.Linkedin }}</a>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
